@@ -5,7 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      schedules: [{
+        "round": "小组赛",
+        "matches": [{
+          "matchTime": "18-06-14",
+          "hostName": "俄罗斯",
+          "hostLogo": "http://duihui.qiumibao.com/zuqiu/eluosi.png",
+          "hostScore": "0",
+          "guestName": "沙特阿拉伯",
+          "guestLogo": "http://duihui.qiumibao.com/zuqiu/shatealabo.png",
+          "guestScore": "0",
+          "matchStatus": 0
+        }]
+      }]
   },
 
   /**

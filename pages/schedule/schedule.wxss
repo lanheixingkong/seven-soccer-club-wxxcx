@@ -1,5 +1,35 @@
 /* pages/schedule/schedule.wxss */
-.center{
+
+.rountTitle {
   display: flex;
   justify-content: center;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+
+.match {
+  margin-top: 10rpx;
+}
+
+.matchTime {
+  font-size: 25rpx;
+  margin-left: 10rpx;
+  margin-right: 28rpx;
+}
+
+.teamName {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.score {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.teamIcon {
+  width: 35px;
+  height: 25px;
 }
