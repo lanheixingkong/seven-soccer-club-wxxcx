@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/schedule/schedule",
     "pages/logs/logs"
   ],
   "window":{
@@ -12,7 +12,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/schedule/schedule",
         "text": "赛程"
       },
       {

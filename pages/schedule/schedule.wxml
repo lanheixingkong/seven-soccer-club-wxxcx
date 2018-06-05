@@ -1,0 +1,11 @@
+<!--pages/schedule/schedule.wxml-->
+<view class="section">
+  <view class="center">小组赛</view>
+  <view class="flex-wrp" >
+    <view class="flex-item bc_green">
+    <text>6-15</text>
+    </view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
