@@ -1,5 +1,7 @@
 /* pages/schedule/schedule.wxss */
-
+.round{
+  margin-bottom: 50rpx;
+}
 .rountTitle {
   display: flex;
   justify-content: center;

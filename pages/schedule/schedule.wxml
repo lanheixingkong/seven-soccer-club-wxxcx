@@ -1,12 +1,13 @@
 <!--pages/schedule/schedule.wxml-->
-<view class="round">
-  <view class="rountTitle">小组赛</view>
-  <view class="match">
-    <text class="matchTime">18-06-14 23:00</text>
-    <text class="teamName">阿根廷</text>
-    <image class="teamIcon" mode="center" src="http://duihui.qiumibao.com/zuqiu/agenting.png"></image>
-    <text class="score">2  -  0</text>
-    <image class="teamIcon" mode="center" src="http://duihui.qiumibao.com/zuqiu/niriliya.png"></image>
-    <text class="teamName">尼日尼亚</text>
+<view wx:for="{{schedules}}" class="round">
+  <view class="rountTitle">{{item.round}}</view>
+  <view wx:for="{{item.matches}}" wx:for-item="match" class="match">
+    <text class="matchTime">{{match.matchTime}}</text>
+    <text class="teamName">{{match.hostName}}</text>
+    <image class="teamIcon" mode="center" src="{{match.hostLogo}}"></image>
+    <text wx:if="{{match.matchStatus == 0}}" class="score">VS</text>
+    <text wx:else class="score">{{match.guestScore}}  -  {{match.guestScore}}</text>
+    <image class="teamIcon" mode="center" src="{{match.guestLogo}}"></image>
+    <text class="teamName">{{match.guestName}}</text>
   </view>
 </view>
