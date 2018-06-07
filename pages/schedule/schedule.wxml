@@ -1,6 +1,6 @@
 <!--pages/schedule/schedule.wxml-->
 <view wx:for="{{schedules}}" class="round">
-  <view class="rountTitle">{{item.round}}</view>
+  <view class="roundTitle">{{item.round}}</view>
   <view style="width:100%" wx:for="{{item.matches}}" wx:for-item="match" class="layout_horizontal">
     <view class="matchTime"><text >{{match.matchTime}}</text></view>
     <view class="teamName"><text>{{match.hostName}}</text></view>

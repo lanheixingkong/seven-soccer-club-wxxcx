@@ -10,7 +10,7 @@
   margin-bottom: 50rpx;
 }
 
-.rountTitle {
+.roundTitle {
   display: flex;
   justify-content: center;
   margin-top: 10rpx;

@@ -1,0 +1,22 @@
+<!--pages/user/user.wxml-->
+<view class="layout_horizontal title">
+  <view class="ranking">排名</view>
+  <view class="user">用户</view>
+  <view class="count">正确场次</view>
+</view>
+<view class="layout_horizontal userlist">
+  <view class="ranking">1</view>
+  <view style='width:150px;height:80rpx;'>
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>    
+  </view>
+  <view class="count">0</view>
+</view>
+<view class="layout_horizontal userlist">
+  <view class="ranking">2</view>
+  <view style='width:150px;height:80rpx;'>
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>    
+  </view>
+  <view class="count">0</view>
+</view>

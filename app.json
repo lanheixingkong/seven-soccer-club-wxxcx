@@ -1,7 +1,8 @@
 {
   "pages":[
+    "pages/user/user",
     "pages/schedule/schedule",
-    "pages/logs/logs"
+    "pages/score/score"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -16,12 +17,12 @@
         "text": "赛程"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/score/score",
         "text": "积分"
       }
       ,
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/user/user",
         "text": "记录"
       }
     ],

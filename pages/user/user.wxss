@@ -1,0 +1,48 @@
+/* pages/user/user.wxss */
+
+.layout_horizontal {
+  height: 50rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+.title {
+  margin-top: 10rpx;
+}
+
+.userlist {
+  height: 80rpx;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.layout_horizontal view {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.ranking {
+  width: 50px;
+  margin-left: 30rpx;
+}
+
+.user {
+  width: 150px;
+}
+
+.count {
+  width: 100px;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}

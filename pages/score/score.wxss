@@ -1,0 +1,64 @@
+.layout_horizontal {
+  height: 50rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+.title {
+  margin-top: 10rpx;
+}
+
+.layout_horizontal view {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.ranking {
+  width: 30px;
+  margin-left: 30rpx;
+}
+
+.team {
+  width: 150rpx;
+}
+.logo {
+  width: 50rpx;
+}
+.name {
+  width: 100rpx;
+  display: flex;
+  margin-left: 10rpx;
+  font-size: 20rpx !important;
+  justify-content: left !important;
+}
+
+.count {
+  width: 30px;
+}
+
+.sheng {
+  width: 30px;
+}
+
+.ping {
+  width: 30px;
+}
+
+.fu {
+  width: 30px;
+}
+
+.goal {
+  width: 50px;
+}
+
+.score {
+  width: 30px;
+}
+
+.groupTitle {
+  display: flex;
+  justify-content: center;
+}

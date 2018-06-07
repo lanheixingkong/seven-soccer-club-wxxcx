@@ -1,0 +1,26 @@
+<view class="layout_horizontal title">
+  <view class="ranking">排名</view>
+  <view class="team">球队</view>
+  <view class="count">场次</view>
+  <view class="sheng">胜</view>
+  <view class="ping">平</view>
+  <view class="fu">负</view>
+  <view class="goal">进/失球</view>
+  <view class="score">积分</view>
+</view>
+<view wx:for="{{scores}}" class="group">
+  <view class="groupTitle">{{item.group}}</view>
+  <view class="layout_horizontal" wx:for="{{item.teams}}" wx:for-item="team">
+    <view class="ranking">{{team.ranking}}</view>
+    <view class="logo" style='font-size:20rpx;'>
+      <image style='width: 20px;height:20px;' src="{{team.logo}}"></image>
+    </view>
+    <view class="name">{{team.name}}</view>
+    <view class="count">{{team.count}}</view>
+    <view class="sheng">{{team.sheng}}</view>
+    <view class="ping">{{team.ping}}</view>
+    <view class="fu">{{team.fu}}</view>
+    <view class="goal">{{team.goal}}</view>
+    <view class="score">{{team.score}}</view>
+  </view>
+</view>
