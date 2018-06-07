@@ -1,14 +1,14 @@
 {
   "pages":[
-    "pages/score/score",
     "pages/schedule/schedule",
+    "pages/score/score",
     "pages/user/user"
     
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "2018世界杯",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
