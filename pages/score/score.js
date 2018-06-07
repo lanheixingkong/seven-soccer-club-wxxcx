@@ -5,60 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    scores: [{
-      "group": "A组",
-      "teams": [{
-        "ranking": 1,
-        "logo": "http://duihui.qiumibao.com/zuqiu/agenting.png",
-        "name": "阿根廷",
-        "count": 0,
-        "sheng": 0,
-        "ping": 0,
-        "fu": 0,
-        "goal": "0/0",
-        "score": 0
-      }, {
-        "ranking": 2,
-        "logo": "http://duihui.qiumibao.com/zuqiu/agenting.png",
-        "name": "荷兰",
-        "count": 0,
-        "sheng": 0,
-        "ping": 0,
-        "fu": 0,
-        "goal": "0/0",
-        "score": 0
-      }]
-    }, {
-      "group": "B组",
-      "teams": [{
-        "ranking": 1,
-        "logo": "http://duihui.qiumibao.com/zuqiu/agenting.png",
-        "name": "阿根廷",
-        "count": 0,
-        "sheng": 0,
-        "ping": 0,
-        "fu": 0,
-        "goal": "0/0",
-        "score": 0
-      }, {
-        "ranking": 2,
-        "logo": "http://duihui.qiumibao.com/zuqiu/agenting.png",
-        "name": "荷兰",
-        "count": 0,
-        "sheng": 0,
-        "ping": 0,
-        "fu": 0,
-        "goal": "0/0",
-        "score": 0
-      }]
-    }]
+    scores: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.loadScoreRankings()
   },
 
   /**
@@ -110,13 +64,13 @@ Page({
 
   },
 
-  loadSchedules() {
+  loadScoreRankings() {
     const that = this
     wx.showLoading({
       title: '加载中',
     })
     wx.request({
-      url: 'https://www.trueman.xyz/score/worldcup/2018',
+      url: 'https://www.trueman.xyz/scoreRanking/worldcup/2018',
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -124,9 +78,10 @@ Page({
         wx.hideLoading()
         //console.log(res.data)
         const ret = res.data
+        console.log(ret)
         if (ret.state == 1) {
           that.setData({
-            //scores = ret.data
+            scores: ret.data
           })
         }
       },

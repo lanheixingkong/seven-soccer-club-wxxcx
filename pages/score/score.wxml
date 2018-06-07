@@ -9,18 +9,18 @@
   <view class="score">积分</view>
 </view>
 <view wx:for="{{scores}}" class="group">
-  <view class="groupTitle">{{item.group}}</view>
+  <view class="groupTitle">{{item.groups}}</view>
   <view class="layout_horizontal" wx:for="{{item.teams}}" wx:for-item="team">
     <view class="ranking">{{team.ranking}}</view>
     <view class="logo" style='font-size:20rpx;'>
-      <image style='width: 20px;height:20px;' src="{{team.logo}}"></image>
+      <image style='width: 20px;height:20px;' src="{{team.teamLogo}}"></image>
     </view>
-    <view class="name">{{team.name}}</view>
-    <view class="count">{{team.count}}</view>
-    <view class="sheng">{{team.sheng}}</view>
-    <view class="ping">{{team.ping}}</view>
-    <view class="fu">{{team.fu}}</view>
-    <view class="goal">{{team.goal}}</view>
+    <view class="name">{{team.teamName}}</view>
+    <view class="count">{{team.matchCount}}</view>
+    <view class="sheng">{{team.win}}</view>
+    <view class="ping">{{team.draw}}</view>
+    <view class="fu">{{team.lose}}</view>
+    <view class="goal">{{team.goals}}</view>
     <view class="score">{{team.score}}</view>
   </view>
 </view>

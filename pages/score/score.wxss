@@ -51,7 +51,7 @@
 }
 
 .goal {
-  width: 50px;
+  width: 70px;
 }
 
 .score {
@@ -61,4 +61,6 @@
 .groupTitle {
   display: flex;
   justify-content: center;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
 }
