@@ -6,7 +6,7 @@
     <view class="teamName"><text>{{match.hostName}}</text></view>
     <view style='float:left'><image class="teamIcon" src="{{match.hostLogo}}"></image></view>
     <view wx:if="{{match.matchStatus == 0}}" class="score">VS</view>
-    <view wx:else class="score">{{match.guestScore}}  -  {{match.guestScore}}</view>
+    <view wx:else class="score">{{match.hostScore}}  -  {{match.guestScore}}</view>
     <view style='float:left'><image class="teamIcon" src="{{match.guestLogo}}"></image></view>
     <view class="teamName"><text>{{match.guestName}}</text></view>
   </view>
