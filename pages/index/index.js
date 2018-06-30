@@ -151,5 +151,10 @@ Page({
         console.log("valid请求失败")
       }
     })
+  },
+  bindViewTap: function(e){
+    wx.navigateTo({
+      url: '../user/user',
+    })
   }
 })

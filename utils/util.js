@@ -38,8 +38,8 @@ const toast = msg => {
     duration: 2000
   })
 }
-//const baseUrl = "https://www.trueman.xyz/"
-const baseUrl = "https://00bbc8ac.ngrok.io/"
+const baseUrl = "https://www.trueman.xyz/"
+//const baseUrl = "https://00bbc8ac.ngrok.io/"
 const getUrl = url => {
   return baseUrl + url
 }
