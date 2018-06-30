@@ -73,10 +73,6 @@ Page({
                 console.log("登录成功")
                 util.saveToken(ret.data)
                 that.getUserInfo()
-                //登录成功
-                wx.navigateTo({
-                  url: '../user/user'
-                })
               } else if (ret.state == 100) {
                 console.log("登录成功，未激活")
                 util.saveToken(ret.data)
@@ -113,9 +109,6 @@ Page({
           if (ret.state == 1) {
             console.log("token有效")
             that.getUserInfo()
-            wx.navigateTo({
-              url: '../user/user'
-            })
           } else if (ret.state == 100) {
             console.log("token有效，未激活")
             //新用户
@@ -152,7 +145,6 @@ Page({
         wx.hideLoading()
         const ret = res.data
         if (ret.state == 1) {
-          util.toast("登录成功")
           that.setData({
             hasUserInfo: true
           })
