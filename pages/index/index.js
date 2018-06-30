@@ -56,7 +56,7 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'https://00bbc8ac.ngrok.io/index/login',
+            url: util.getUrl('index/login'),
             data: {
               code: res.code
             },
@@ -69,13 +69,15 @@ Page({
                 wx.navigateTo({
                   url: '../user/user'
                 })
-              } else {
+              } else if (ret.state == 100) {
                 console.log("登录成功，未激活")
                 util.saveToken(ret.data)
                 //新用户
                 that.setData({
                   hasUserInfo: false
                 })
+              } else {
+                  util.toast("登录失败")
               }
             },
             fail: function() {
@@ -92,28 +94,28 @@ Page({
     console.log("开始校验token操作")
     const that = this
     const token = util.getToken()
-    console.log("token:"+token)
+    console.log("token:" + token)
     if (token) {
       //校验token有效性
       //发起网络请求
       wx.request({
-        url: 'https://00bbc8ac.ngrok.io/index/check/' + token,
+        url: util.getUrl('index/check/' + token),
         success: function(res) {
           const ret = res.data
-          if (ret.state == 100) {
+          if (ret.state == 1) {
+            console.log("token有效")
+            wx.navigateTo({
+              url: '../user/user'
+            })
+          } else if (ret.state == 100) {
             console.log("token有效，未激活")
             //新用户
             that.setData({
               hasUserInfo: false
             })
-          } else if (ret.state == -1) {
+          } else {
             console.log("token过期，重新登录")
             that.login()
-          } else {
-            console.log("token有效")
-            wx.navigateTo({
-              url: '../user/user'
-            })
           }
         },
         fail: function() {
@@ -124,17 +126,17 @@ Page({
       that.login()
     }
   },
-  saveUserInfo: function(){
+  saveUserInfo: function() {
     const that = this
     const userInfo = this.data.userInfo
     const token = util.getToken()
     wx.request({
-      url: 'https://00bbc8ac.ngrok.io/index/userinfo',
+      url: util.getUrl('index/userinfo'),
       header: {
         'token': token
       },
       data: userInfo,
-      success: function (res) {
+      success: function(res) {
         const ret = res.data
         if (ret.state == 1) {
           util.toast("登录成功")
@@ -145,7 +147,7 @@ Page({
           util.toast("登录失败")
         }
       },
-      fail: function () {
+      fail: function() {
         console.log("valid请求失败")
       }
     })

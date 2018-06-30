@@ -1,4 +1,5 @@
 // pages/schedule/schedule.js
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -70,7 +71,7 @@ Page({
       title: '加载中',
     })
     wx.request({
-      url: 'https://www.trueman.xyz/schedule/worldcup/2018',
+      url: util.getUrl('schedule/worldcup/2018'),
       header: {
         'content-type': 'application/json' // 默认值
       },
