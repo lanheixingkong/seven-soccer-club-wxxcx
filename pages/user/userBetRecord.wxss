@@ -1,0 +1,54 @@
+/* pages/user/userBetRecord.wxss */
+.layout_horizontal{
+  height: 80rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+.schedule{
+  margin-left:70rpx;
+}
+
+.nickname{
+  display: flex;
+  justify-content: center;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  font-size:30rpx;
+}
+
+.record{
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  border-bottom:solid 1rpx #aaa; 
+}
+
+radio {
+  transform:scale(0.5);
+}
+.match {
+  margin-top: 10rpx;
+}
+
+.teamName {
+  font-size: 30rpx;
+  width: 120rpx;
+  margin-left: 30rpx;
+}
+
+.score {
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.teamIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.bet{
+  font-size:30rpx;
+  margin-left:80rpx;
+}

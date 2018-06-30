@@ -83,5 +83,12 @@ Page({
         }
       }
     })
+  },
+  bindViewTap: function(event){
+    const userId = event.target.dataset.userid
+    const nickname = event.target.dataset.nickname
+    wx.navigateTo({
+      url: 'userBetRecord?userId=' + userId + "&nickname=" + nickname,
+    })
   }
 })

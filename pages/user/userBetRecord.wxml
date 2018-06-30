@@ -1,0 +1,30 @@
+<!--pages/user/userBetRecord.wxml-->
+<view class="nickname">{{nickname}}的竞猜</view>
+<view wx:for="{{records}}" wx:for-item="match" class="record">
+  <view style="width:100%" class="layout_horizontal schedule">
+    <view class="teamName">
+      <text>{{match.hostName}}</text>
+    </view>
+    <view style='float:left'>
+      <image class="teamIcon" src="{{match.hostLogo}}"></image>
+    </view>
+    <view wx:if="{{match.matchStatus == 0}}" class="score">VS</view>
+    <view wx:else class="score">{{match.hostScore}} - {{match.guestScore}}</view>
+    <view style='float:left'>
+      <image class="teamIcon" src="{{match.guestLogo}}"></image>
+    </view>
+    <view class="teamName">
+      <text>{{match.guestName}}</text>
+    </view>
+  </view>
+  <view class="layout_horizontal bet">
+    <radio-group class="radio-group" bindchange="radioChange" data-recordid="{{match.recordId}}">
+      <label class="radio" wx:for="{{bets}}" style="color:{{item.color}}">
+        <radio wx:if="{{match.bet == item.value}}" value="{{item.value}}" checked="checked" disabled="{{match.canBet == 0}}"/>
+        <radio wx:if="{{match.bet != item.value}}" value="{{item.value}}" disabled="{{match.canBet == 0}}"/>
+        {{item.name}}
+      </label>
+    </radio-group>
+    <image style="width:20px;height:20px;margin-left:50rpx;" src="{{match.betResultImg}}"></image>
+  </view>
+</view>
