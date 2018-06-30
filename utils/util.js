@@ -14,6 +14,34 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const getToken = () => {
+  try {
+    var value = wx.getStorageSync('token')
+    if (value) {
+      return value
+    }
+  } catch (e) {
+    // Do something when catch error
+  }
+}
+
+const saveToken = token => {
+  try {
+    wx.setStorageSync('token', token)
+  } catch (e) {}
+}
+
+const toast = msg => {
+  wx.showToast({
+    title: msg,
+    icon: 'none',
+    duration: 2000
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getToken: getToken,
+  saveToken: saveToken,
+  toast: toast
 }

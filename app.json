@@ -2,8 +2,8 @@
   "pages":[
     "pages/schedule/schedule",
     "pages/score/score",
+    "pages/index/index",
     "pages/user/user"
-    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -23,7 +23,7 @@
       }
       ,
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/index/index",
         "text": "记录"
       }
     ],
