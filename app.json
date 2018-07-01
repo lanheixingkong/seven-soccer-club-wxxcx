@@ -4,7 +4,8 @@
     "pages/score/score",
     "pages/index/index",
     "pages/user/user",
-    "pages/user/userBetRecord"
+    "pages/user/userBetRecord",
+    "pages/admin/admin"
   ],
   "window":{
     "backgroundTextStyle":"light",

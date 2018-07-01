@@ -8,6 +8,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    isAdmin: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad: function() {
@@ -71,7 +72,10 @@ Page({
               const ret = res.data
               if (ret.state == 1) {
                 console.log("登录成功")
-                util.saveToken(ret.data)
+                util.saveToken(ret.data.token)
+                that.setData({
+                  isAdmin: ret.data.admin == 1
+                })
                 that.getUserInfo()
               } else if (ret.state == 100) {
                 console.log("登录成功，未激活")
@@ -108,6 +112,9 @@ Page({
           const ret = res.data
           if (ret.state == 1) {
             console.log("token有效")
+            that.setData({
+              isAdmin: ret.data.admin == 1
+            })
             that.getUserInfo()
           } else if (ret.state == 100) {
             console.log("token有效，未激活")
@@ -170,5 +177,12 @@ Page({
       this.checkToken()
     }
 
+  },
+  bindAdminTap: function(e){
+    if(this.data.isAdmin){
+      wx.navigateTo({
+        url: '../admin/admin',
+      })
+    }
   }
 })

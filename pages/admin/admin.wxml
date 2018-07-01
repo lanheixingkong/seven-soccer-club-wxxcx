@@ -1,0 +1,6 @@
+<!--pages/admin/admin.wxml-->
+<view><button bindtap='update' data-method-name="updateAll">更新全部</button></view>
+<view><button bindtap='update' data-method-name="updateKnockoutSchedule">更新赛程</button></view>
+<view><button bindtap='update' data-method-name="updateScheduleScore">更新比分</button></view>
+<view><button bindtap='update' data-method-name="updateScheduleMatchStatus">更新比赛状态</button></view>
+<view><button bindtap='update' data-method-name="updateBetResult">更新竞猜</button></view>
